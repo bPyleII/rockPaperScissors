@@ -14,7 +14,10 @@
     //Declare a function to Ask the user to input rock, scissors, or paper
     function playerSelection(input){
         let choice = prompt('Choose rock, scissors, or paper', '');
+        choice = choice.toLowerCase();
+        console.log(choice);
         return choice;
+        
     }
 
     console.log(playerSelection(''));
