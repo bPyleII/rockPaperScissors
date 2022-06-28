@@ -31,7 +31,14 @@
     function computerPlay(){
         //create an array of strings for the computer to choose from
         const options = ['rock', 'scissors', 'paper'];
-        
+        //select an element at random fromt the array
+        //use Math.random to generate a random number between 0 and 1
+        //Multiply that number by the array length (3)
+        //Use Math.floor to round that number down to the nearest integer that will match the element positioning in the array
+        const choice = options[Math.floor(Math.random()*options.length)];
+        console.log(choice);
+        //return the element selected fromt the array
+        return choice;
 
     }
 
