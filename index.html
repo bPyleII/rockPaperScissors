@@ -13,10 +13,19 @@
 
     //Declare a function to Ask the user to input rock, scissors, or paper
     function playerSelection(input){
+        //set the user input to choice
         let choice = prompt('Choose rock, scissors, or paper', '');
+        //make the input case insensitive by converting choice to lowercase
         choice = choice.toLowerCase();
-        console.log(choice);
-        return choice;
+        //Verify that choice is either rock, scissors, or paper
+        if (choice === 'rock' || choice === 'scissors' || choice === 'paper'  ){
+            //return the vaild choice
+            return choice;
+        } else {
+            //tell the user to start over
+            alert('Invalid choice. Try again!');
+            
+        }
         
     }
 
