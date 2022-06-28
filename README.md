@@ -1,1 +1,2 @@
 # rockPaperScissors
+This rock-paper-scissors game will be my first implementation of the foundatins of JavaScript. The game will be created to run in the browser and will put the user against the computer. Later, I will use HTML and CSS to create a GUI for the game. 
