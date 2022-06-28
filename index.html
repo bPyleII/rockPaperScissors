@@ -12,7 +12,7 @@
 <script>
 
     //Declare a function to Ask the user to input rock, scissors, or paper
-    function playerSelection(input){
+    function playerSelection(){
         //set the user input to choice
         let choice = prompt('Choose rock, scissors, or paper', '');
         //make the input case insensitive by converting choice to lowercase
@@ -27,7 +27,10 @@
         }
     }
 
-    //Declare a fucntion that makes the computer generate a choice between rock, scissors, or paper
+    
+    console.log(playerSelection());
+
+    //Declare a function that makes the computer generate a choice between rock, scissors, or paper
     function computerPlay(){
         //create an array of strings for the computer to choose from
         const options = ['rock', 'scissors', 'paper'];
@@ -36,19 +39,25 @@
         //Multiply that number by the array length (3)
         //Use Math.floor to round that number down to the nearest integer that will match the element positioning in the array
         const choice = options[Math.floor(Math.random()*options.length)];
-        console.log(choice);
         //return the element selected fromt the array
         return choice;
 
     }
 
+    console.log(computerPlay());
+
     //Create a function to play rock, paper, scissors against the computer
-    function playRound(playerSelection, computerPlay){
+    function playRound(){
         alert('Let\'s play rock, paper, scissors!')
-        
+        let playerChoice = playerSelection();
+        let computerChoice = computerPlay();
+
+        console.log(playerChoice);
+        console.log(computerChoice);
+
     }
 
-    console.log(computerPlay(''));
+    console.log(playRound());
 
 </script>
 </html>
