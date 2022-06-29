@@ -50,8 +50,7 @@
         //store the value of computerPlay
         let computerChoice = computerPlay();
 
-        //console.log(playerChoice);
-        //console.log(computerChoice);
+
         //variable to store a string stating the winner
         let winState;
 
@@ -67,37 +66,41 @@
         // to determine who wins and store it in winState     
         }else if (playerChoice === 'rock'){
             if(computerChoice === 'paper'){
-                winState = 'The computer has won! Paper beats rock!!'
+                winState = 'The computer has won!' // Paper beats rock
             } else {
-                winState = 'You have won! Rock beats scissors!!'
+                winState = 'You have won!'//' Rock beats scissors!!'
             }
         }else if (playerChoice === 'paper'){
             if(computerChoice === 'scissors'){
-                winState = 'The computer has won! Scissors beats paper!!'
+                winState = 'The computer has won!'//' Scissors beats paper!!'
             } else {
-                winState = 'You have won! Paper beats rock!!'
+                winState = 'You have won!'//' Paper beats rock!!'
             }
         }else if (playerChoice === 'scissors'){
             if(computerChoice === 'rock'){
-                winState = 'The computer has won! Rock beats scissors!!'
+                winState = 'The computer has won!'//' Rock beats scissors!!'
             } else {
-                winState = 'You have won! Scissors beats paper!!'
+                winState = 'You have won!'//' Scissors beats paper!!'
             }
         }   
 
         return winState;
     }
 
+    
+
+    
+
 
     //Declare a function that that allows the user to play the computer 5 times and keeps score to report a winner
     function game(){
-        for (let i = 0; i < 5; i++){
+        for (let i = 0; i < 2; i++){
             console.log(playRound());
         }
 
     }
 
-    game();
+   game();
 
 </script>
 </html>
