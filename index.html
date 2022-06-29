@@ -50,8 +50,8 @@
         //store the value of computerPlay
         let computerChoice = computerPlay();
 
-        console.log(playerChoice);
-        console.log(computerChoice);
+        //console.log(playerChoice);
+        //console.log(computerChoice);
         //variable to store a string stating the winner
         let winState;
 
@@ -61,6 +61,7 @@
         //there is no need to compare against the player's choice
         if (playerChoice === computerChoice){
             alert('It\'s a tie!')
+            winState = 'It\'s a tie!';
         // if it is not a tie, identify the player choice with the following else if statements
         //Once the player choice is identify it can be compared to the two remaining computer options 
         // to determine who wins and store it in winState     
@@ -87,7 +88,8 @@
         return winState;
     }
 
-    console.log(playRound());
+
+    
 
 </script>
 </html>
