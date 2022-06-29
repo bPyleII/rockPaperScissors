@@ -87,11 +87,18 @@
         return winState;
     }
 
-    
+    //Declare a function to store the value of who won the round
+    function roundWinner (playRound){
+        //the conditional tells what value to return based on who won the round, the user or the computer
+        if (playRound === 'You have won!'){
+            return 'user';
+        } else {
+            return 'computer';
+        }
+
+    }
 
     
-
-
     //Declare a function that that allows the user to play the computer 5 times and keeps score to report a winner
     function game(){
         for (let i = 0; i < 2; i++){
