@@ -83,31 +83,52 @@
                 winState = 'You have won!'//' Scissors beats paper!!'
             }
         }   
-
-        return winState;
+        //returns a string 'You have won!' or 'The computer has won!'
+        //console.log(winState);
+        return winState = 'You have won!';
     }
 
     //Declare a function to store the value of who won the round
     function roundWinner (playRound){
         //the conditional tells what value to return based on who won the round, the user or the computer
         if (playRound === 'You have won!'){
+            //console.log('user');
+            //console.log(playRound);
             return 'user';
-        } else {
+        } else if (playRound === 'The computer has won!') {
+            //console.log('computer')
+            //console.log(playRound);
             return 'computer';
+        } else{
+            return 'It\'s a tie!' ;
         }
 
     }
-
+    //Initialize the winCounter variable outside of the function so that the counter is not reset to zero everytime the function is called
+    let winCounter = 0;
+    //Not currently incrementing becuase the argument being passed in undefined
+    function playerWinCounter(roundWinner){
+        
+        console.log(roundWinner)
+        if (roundWinner === 'user'){
+            ++winCounter;
+        } else {console.log('not a win'); }
+        
+        //console.log(winCounter);
+        return winCounter;
+    }
     
     //Declare a function that that allows the user to play the computer 5 times and keeps score to report a winner
     function game(){
-        for (let i = 0; i < 2; i++){
-            console.log(playRound());
+        for (let i = 0; i < 9; i++){
+            //console.log(roundWinner(playRound()));
+            console.log(playerWinCounter(roundWinner(playRound())));
         }
 
     }
 
    game();
+
 
 </script>
 </html>
