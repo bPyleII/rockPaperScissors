@@ -1,0 +1,50 @@
+body {
+    background: coral;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    font-size: 24px;
+
+    /*border-style: solid;
+    border-color: aquamarine;
+    border-width: 4px;
+    */
+}
+
+.userInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+
+    font-size: 20px;
+    
+}
+
+.rockBtn, .paperBtn, .scissorsBtn {
+    background-color: aliceblue;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+    width: 200px;
+    border-radius: 8px;
+    transition: ease-out 0.5s;
+}
+
+.rockBtn:hover {
+    box-shadow: inset 200px 0 0 0 rgb(8, 177, 177);
+}
+
+.paperBtn:hover {
+    box-shadow: inset 200px 0 0 0 rgb(8, 177, 177);
+}
+
+.scissorsBtn:hover {
+    box-shadow: inset 200px 0 0 0 rgb(8, 177, 177);
+}
+
+
