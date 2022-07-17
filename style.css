@@ -25,7 +25,7 @@ body {
     
 }
 
-.rockBtn, .paperBtn, .scissorsBtn {
+#rockBtn, #paperBtn, #scissorsBtn {
     background-color: aliceblue;
     font-size: 20px;
     font-weight: 700;
@@ -35,15 +35,15 @@ body {
     transition: ease-out 0.5s;
 }
 
-.rockBtn:hover {
+#rockBtn:hover {
     box-shadow: inset 200px 0 0 0 rgb(8, 177, 177);
 }
 
-.paperBtn:hover {
+#paperBtn:hover {
     box-shadow: inset 200px 0 0 0 rgb(8, 177, 177);
 }
 
-.scissorsBtn:hover {
+#scissorsBtn:hover {
     box-shadow: inset 200px 0 0 0 rgb(8, 177, 177);
 }
 
