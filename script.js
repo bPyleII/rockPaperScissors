@@ -2,11 +2,27 @@
     //Use the nodelist event listener to find which button the user clicked
     btn.forEach((btn) => {
         btn.addEventListener('click',(e) => {
-            console.log(e.target.id);
-            playRound(e.target.id);
+            //console.log(e.target.id);
+            //playRound(e.target.id);
+            playerWinCounter(roundWinner(playRound(e.target.id)));
 
         });
     });
+
+    /*
+    let testVar = 4;
+    let testVarTwo = 3;
+
+    const userWins = document.getElementById('userWins');
+    userWins.textContent += `${testVar}`;
+
+    const computerWins = document.getElementById('computerWins');
+    computerWins.textContent += `${testVarTwo}`;
+    */
+
+
+    
+
 
 
     //Declare a function that makes the computer generate a choice between rock, scissors, or paper
@@ -85,23 +101,36 @@
         }
 
     }
-    //Initialize the winCounter variable outside of the function so that the counter is not reset to zero everytime the function is called
-    let winCounter = 0;
+
+
+
+
+   
+    //Initialize the winCounter variables outside of the function so that the counter is not reset to zero everytime the function is called
+    let computerWinCounter = 0;
+    let userWinCounter = 0;
+
     //This function increments winCounter evertime the user wins a round.
     function playerWinCounter(roundWinner){
-        
-        
         if (roundWinner === 'user'){
+            userWinCounter++;
             console.log('You won that round');
             //add 1 to the winCounter if the user has won
-            ++winCounter;
         } else {
             //if the user did not win, do nothing
+            computerWinCounter++;
             console.log('not a win'); 
         }
+
+        const userWins = document.getElementById('userWins');
+        userWins.textContent = `User Wins: ${userWinCounter}`;
+    
+        
+        const computerWins = document.getElementById('computerWins');
+        computerWins.textContent = `Computer Wins: ${computerWinCounter}`;
         
         //the return value is a string telling the user how many rounds they have won so far
-        return `you have won ${winCounter} round(s)`;
+        return;
     }
     
     //Declare a function that that allows the user to play the computer 5 times and keeps score to report a winner
