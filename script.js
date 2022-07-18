@@ -4,7 +4,7 @@
         btn.addEventListener('click',(e) => {
             //console.log(e.target.id);
             //playRound(e.target.id);
-            playerWinCounter(roundWinner(playRound(e.target.id)));
+            WinCounter(roundWinner(playRound(e.target.id)));
 
         });
     });
@@ -111,7 +111,7 @@
     let userWinCounter = 0;
 
     //This function increments winCounter evertime the user wins a round.
-    function playerWinCounter(roundWinner){
+    function WinCounter(roundWinner){
         if (roundWinner === 'user'){
             userWinCounter++;
             console.log('You won that round');
@@ -138,7 +138,7 @@
         //start at 0 and play a round until i is no longer less than 5. This will result in playing 5 total rounds. 0,1,2,3,4
         for (let i = 0; i < 5; i++){
             //calls the function playerWinCounter() which needs an argument passed from roundWinner() which needs an argument passed from playRound()
-            console.log(playerWinCounter(roundWinner(playRound())));
+            console.log(WinCounter(roundWinner(playRound())));
         }
         //After the rounds are over, if the user's winCounter is 3 or more, then the user has won the game. Else the computer has won.
         if (winCounter >= 3){
