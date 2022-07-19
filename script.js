@@ -2,7 +2,7 @@
     //Use the nodelist event listener to find which button the user clicked
     btn.forEach((btn) => {
         btn.addEventListener('click',(e) => {
-            //console.log(e.target.id);
+            console.log(e.target.id);
             //playRound(e.target.id);
             WinCounter(roundWinner(playRound(e.target.id)));
 
@@ -97,7 +97,7 @@
             
             return 'computer';
         } else{
-            return 'It\'s a tie!' ;
+            return 'tie' ;
         }
 
     }
@@ -116,11 +116,12 @@
             userWinCounter++;
             console.log('You won that round');
             //add 1 to the winCounter if the user has won
-        } else {
-            //if the user did not win, do nothing
+        } else if(roundWinner === 'computer') {
             computerWinCounter++;
-            console.log('not a win'); 
+            console.log('The computer won'); 
+        } else  { console.log('tie');
         }
+        
 
         const userWins = document.getElementById('userWins');
         userWins.textContent = `User Wins: ${userWinCounter}`;
