@@ -55,3 +55,24 @@ body {
     font: 20px;
     font-weight: 600;
 }
+
+.results {
+    display: flex;
+    justify-content: space-around;
+    gap: 3em;
+
+    /*border-style: solid;
+    border-color: aquamarine;
+    border-width: 4px;
+    */
+}
+
+.gameinputs {
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto 30px auto  ;
+    
+    row-gap: 30px;
+    font: 20px;
+    font-weight: 600;
+}
