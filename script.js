@@ -5,6 +5,9 @@
             console.log(e.target.id);
             //playRound(e.target.id);
             WinCounter(roundWinner(playRound(e.target.id)));
+            
+            const userChoice = document.getElementById('playerChoice');
+             userChoice.textContent = `You chose: ${e.target.id}`;
 
         });
     });
@@ -28,13 +31,17 @@
     //Declare a function that makes the computer generate a choice between rock, scissors, or paper
     function computerPlay(){
         //create an array of strings for the computer to choose from
-        const options = ['rockBtn', 'scissorsBtn', 'paperBtn'];
+        const options = ['rock', 'scissors', 'paper'];
         //select an element at random fromt the array
         //use Math.random to generate a random number between 0 and 1
         //Multiply that number by the array length (3)
         //Use Math.floor to round that number down to the nearest integer that will match the element positioning in the array
         const choice = options[Math.floor(Math.random()*options.length)];
         //return the element selected fromt the array
+
+        const computerChoice = document.getElementById('computerChoice');
+        computerChoice.textContent = `The computer chose: ${choice}`;
+
         return choice;
 
     }
@@ -61,20 +68,20 @@
         // if it is not a tie, identify the player choice with the following else if statements
         //Once the player choice is identify it can be compared to the two remaining computer options 
         // to determine who wins and store it in winState     
-        }else if (playerChoice === 'rockBtn'){
-            if(computerChoice === 'paperBtn'){
+        }else if (playerChoice === 'rock'){
+            if(computerChoice === 'paper'){
                 winState = 'The computer has won!' // Paper beats rock
             } else {
                 winState = 'You have won!'//' Rock beats scissors!!'
             }
-        }else if (playerChoice === 'paperBtn'){
-            if(computerChoice === 'scissorsBtn'){
+        }else if (playerChoice === 'paper'){
+            if(computerChoice === 'scissors'){
                 winState = 'The computer has won!'//' Scissors beats paper!!'
             } else {
                 winState = 'You have won!'//' Paper beats rock!!'
             }
-        }else if (playerChoice === 'scissorsBtn'){
-            if(computerChoice === 'rockBtn'){
+        }else if (playerChoice === 'scissors'){
+            if(computerChoice === 'rock'){
                 winState = 'The computer has won!'//' Rock beats scissors!!'
             } else {
                 winState = 'You have won!'//' Scissors beats paper!!'
@@ -82,6 +89,8 @@
         }   
         console.log(computerChoice);
         console.log(winState);
+        const winner = document.getElementById('winState');
+        winner.textContent = `Result: ${winState}`;
         return winState;
         
         
