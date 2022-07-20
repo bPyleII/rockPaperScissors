@@ -78,10 +78,8 @@
         const winner = document.getElementById('winState');
         winner.textContent = `Result: ${winState}`;
         return winState;
-        
-        
+          
     }
-
 
     //Declare a function that stores the value of the winner of the round. The argument passed comes from the return value of function playRound()
     function roundWinner (playRound){
@@ -97,10 +95,6 @@
 
     }
 
-
-
-
-   
     //Initialize the winCounter variables outside of the function so that the counter is not reset to zero everytime the function is called
     let computerWinCounter = 0;
     let userWinCounter = 0;
@@ -128,22 +122,6 @@
         return;
     }
     
-    /*
-    //Declare a function that that allows the user to play the computer 5 times and keeps score to report a winner
-    function game(){
-        //start at 0 and play a round until i is no longer less than 5. This will result in playing 5 total rounds. 0,1,2,3,4
-        for (let i = 0; i < 5; i++){
-            //calls the function playerWinCounter() which needs an argument passed from roundWinner() which needs an argument passed from playRound()
-            console.log(WinCounter(roundWinner(playRound())));
-        }
-        //After the rounds are over, if the user's winCounter is 3 or more, then the user has won the game. Else the computer has won.
-        if (winCounter >= 3){
-            console.log(`You have defeated the computer!! You won ${winCounter} games!`)
-        } else {console.log(`You have not defeated the computer :( You only won ${winCounter} game(s)!`);}
-
-    }
-
-    */
 
 function game(){
     if (computerWinCounter == 5){
