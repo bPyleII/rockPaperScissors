@@ -3,30 +3,15 @@
     btn.forEach((btn) => {
         btn.addEventListener('click',(e) => {
             console.log(e.target.id);
-            //playRound(e.target.id);
-            WinCounter(roundWinner(playRound(e.target.id)));
+            //pass the button clicked as the argument for the functions that run the game
+            game(WinCounter(roundWinner(playRound(e.target.id))));
             
+            //Used to display the button clicked to the user in the results
             const userChoice = document.getElementById('playerChoice');
-             userChoice.textContent = `You chose: ${e.target.id}`;
+             userChoice.textContent = `You chose: ${e.target.id}`; 
 
         });
     });
-
-    /*
-    let testVar = 4;
-    let testVarTwo = 3;
-
-    const userWins = document.getElementById('userWins');
-    userWins.textContent += `${testVar}`;
-
-    const computerWins = document.getElementById('computerWins');
-    computerWins.textContent += `${testVarTwo}`;
-    */
-
-
-    
-
-
 
     //Declare a function that makes the computer generate a choice between rock, scissors, or paper
     function computerPlay(){
@@ -89,6 +74,7 @@
         }   
         console.log(computerChoice);
         console.log(winState);
+        //Used to display the winner of the round in the results
         const winner = document.getElementById('winState');
         winner.textContent = `Result: ${winState}`;
         return winState;
@@ -131,18 +117,18 @@
         } else  { console.log('tie');
         }
         
-
+        //These two DOM methods give the results of the above conditional to the user in the results section
         const userWins = document.getElementById('userWins');
         userWins.textContent = `User Wins: ${userWinCounter}`;
-    
         
         const computerWins = document.getElementById('computerWins');
         computerWins.textContent = `Computer Wins: ${computerWinCounter}`;
         
-        //the return value is a string telling the user how many rounds they have won so far
+        //nothing needs to be returned because the DOM methods display the information needed
         return;
     }
     
+    /*
     //Declare a function that that allows the user to play the computer 5 times and keeps score to report a winner
     function game(){
         //start at 0 and play a round until i is no longer less than 5. This will result in playing 5 total rounds. 0,1,2,3,4
@@ -157,5 +143,19 @@
 
     }
 
-   //game();
+    */
+
+function game(){
+    if (computerWinCounter == 5){
+        const compWinGame = document.getElementById('gameWinner');
+        compWinGame.textContent = 'The Computer has won the game :( Make a new choice to play again!'
+        computerWinCounter = 0;
+        userWinCounter =0;
+    } else if(userWinCounter ==5){
+        const userWinGame = document.getElementById('gameWinner');
+        userWinGame.textContent = 'You have defeated the computer! Make a new choice to play again!'
+        computerWinCounter = 0;
+        userWinCounter =0;
+    } else return;
+}
 

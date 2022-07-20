@@ -35,7 +35,7 @@ body {
     padding: 10px;
     width: 200px;
     border-radius: 8px;
-    transition: ease-out 0.5s;
+    transition: ease-out 0.3s;
 }
 #rock:hover {
     box-shadow: inset 200px 0 0 0 rgb(8, 177, 177);
@@ -52,7 +52,7 @@ body {
     flex-direction: column;
     margin: 50px 30px;
     row-gap: 30px;
-    font: 20px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -73,6 +73,14 @@ body {
     margin: 30px auto 30px auto  ;
     
     row-gap: 30px;
-    font: 20px;
+    font-size: 20px;
     font-weight: 600;
+}
+
+#gameWinner {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(47, 148, 148);
+
 }
