@@ -148,14 +148,15 @@
 function game(){
     if (computerWinCounter == 5){
         const compWinGame = document.getElementById('gameWinner');
-        compWinGame.textContent = 'The Computer has won the game :( Make a new choice to play again!'
+        compWinGame.textContent = 'The Computer has won the game :( Make a new choice to play again!';
         computerWinCounter = 0;
         userWinCounter =0;
     } else if(userWinCounter ==5){
         const userWinGame = document.getElementById('gameWinner');
-        userWinGame.textContent = 'You have defeated the computer! Make a new choice to play again!'
+        userWinGame.textContent = 'You have defeated the computer! Make a new choice to play again!';
         computerWinCounter = 0;
         userWinCounter =0;
-    } else return;
+    } else {}
+    ;
 }
 
